@@ -77,7 +77,7 @@ jobs:
 
       - name: Clone and Build EFI boot image
         run: |
-          git clone --depth=1 https://source.denx.de/u-boot/u-boot.git
+          git clone --depth=1 https://git.u-boot-project.org//u-boot/u-boot.git/
           cd u-boot
           sed -i "s/^preboot=.*\$/preboot=scsi scan; part start scsi 0 userdata userdata_start; part size scsi 0 userdata userdata_size; blkmap create root; blkmap map root 0 0x\${userdata_size} linear scsi 0 0x\${userdata_start}/" board/qualcomm/qcom-phone.env
           make qcom_defconfig qcom-phone.config
