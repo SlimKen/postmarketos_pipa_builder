@@ -97,7 +97,7 @@ jobs:
 
       - name: Clone pmbootstrap and add to path
         run: |
-          git clone --depth=1 https://gitlab.postmarketos.org/postmarketOS/pmbootstrap.git ~/pmbootstrap
+          git clone --depth=1 https://gitlab.nura.eco/postmarketOS/pmbootstrap.git/ ~/pmbootstrap
           mkdir -p ~/.local/bin
           ln -s "$HOME/pmbootstrap/pmbootstrap.py" ~/.local/bin/pmbootstrap
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
